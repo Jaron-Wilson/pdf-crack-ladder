@@ -1,0 +1,14 @@
+# Illustrative -m 10500 (PDF 1.4-1.6) hash FORMAT. This is a shape reference, not a
+# crackable hash. For a real, verified example run:  hashcat -m 10500 --example-hashes
+#
+#   $pdf$<V>*<R>*<bits>*<P>*<encMeta>*<idLen>*<id>*<uLen>*<u>*<oLen>*<o>
+#        |   |    |     |     |          |      |     |    |    |    |
+#        |   |    |     |     |          |      |     |    |    |    o-string (owner)
+#        |   |    |     |     |          |      |     |    u-string (user)
+#        |   |    |     |     |          |      doc id (hex)
+#        |   |    |     |     encrypt-metadata flag
+#        |   |    |     P (permissions)
+#        |   |    key length in bits
+#        |   R (revision)
+#        V (algorithm version)
+$pdf$2*3*128*-1028*1*16*<16-byte-id-hex>*32*<user-hash-hex>*32*<owner-hash-hex>

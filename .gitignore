@@ -1,0 +1,20 @@
+# never commit the target, the extracted hash, or the recovered secret
+*.pdf
+work/
+hash.txt
+pot.txt
+FOUND.txt
+*.restore
+hashcat.pid
+progress.log
+run*.log
+extract.log
+
+# big wordlists are downloaded by setup, not stored
+wordlists/rockyou.txt
+wordlists/rockyou-100k.txt
+
+# tools
+hashcat-*/
+*.7z
+john/
